@@ -21,18 +21,15 @@ pub fn factor_semiprime(n: i128) -> (i128, i128) {
     let mut x = (rng.gen::<i128>() % (n - 2)) + 2;
     let mut y = x;
 
-    // Pick c in range [1, n).
-    let c = (rng.gen::<i128>() % (n - 1)) + 1;
-
     let mut factor = 1;
 
     while factor == 1 {
       // Tortoise Move: x_(i+1) = f(x_i)
-      x = (x * x + c + n) % n;
+      x = (x * x + 1) % n;
 
       // Hare Move: y_(i+1) = f(f(y_i))
-      y = (y * y + c + n) % n;
-      y = (y * y + c + n) % n;
+      y = (y * y + 1) % n;
+      y = (y * y + 1) % n;
 
       factor = gcd((x - y).abs(), n);
     }
