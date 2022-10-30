@@ -27,3 +27,22 @@ Print[p];
 (* Print the product of the two random primes *)
 Print[Times @@ p];
 ```
+
+## How fast is it?
+
+```sh
+$ time echo 437 | ./target/release/fator-semiprime
+437 = 23 * 19
+
+real    0m0.008s
+user    0m0.003s
+sys     0m0.007s
+
+$ time echo 64786756484626223 | ./target/release/fator-semiprime
+64786756484626223 = 222522227 * 291147349
+
+real    0m0.026s
+user    0m0.026s
+sys     0m0.002s
+$
+```
