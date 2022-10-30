@@ -15,7 +15,7 @@ fn gcd(mut a: i128, mut b: i128) -> i128 {
 pub fn factor_semiprime(n: i128) -> (i128, i128) {
   let mut rng = rand::thread_rng();
 
-	// Loop while the factor is n.
+  // Loop while the factor is n.
   loop {
     // Pick x in range [2, n).
     let mut x = (rng.gen::<i128>() % (n - 2)) + 2;
