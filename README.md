@@ -9,8 +9,8 @@ An implementation of the Pollard's rho algorithm for factoring semiprime numbers
 ## How to use?
 
 ```sh
-$ cargo build --release
-$ echo 18851959175571007 | ./target/release/factor-semiprime
+$ cargo install factor-semiprime
+$ echo 18851959175571007 | factor-semiprime
 18851959175571007 = 160097647 * 117752881
 ```
 
@@ -31,14 +31,14 @@ Print[Times @@ p];
 ## How fast is it?
 
 ```sh
-$ time echo 437 | ./target/release/fator-semiprime
+$ time echo 437 | ./target/release/factor-semiprime
 437 = 23 * 19
 
 real    0m0.008s
 user    0m0.003s
 sys     0m0.007s
 
-$ time echo 64786756484626223 | ./target/release/fator-semiprime
+$ time echo 64786756484626223 | ./target/release/factor-semiprime
 64786756484626223 = 222522227 * 291147349
 
 real    0m0.026s
